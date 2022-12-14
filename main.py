@@ -1,16 +1,34 @@
-# This is a sample Python script.
+import turtle
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+string = "F[+F]-F[+F[+F]-F]-F[+F]-F[+F[+F]-F[+F[+F]-F]-F[+F]-F]-F[+F]-F[+F[+F]-F]-F[+F]-F"
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def draw(turtle_variable, string_variable, length, angle):
+    savePosition = turtle_variable.pos()
+    for character in string_variable:
+        if character == "¨[":
+            savePosition = turtle_variable.pos()
+        elif character == "]":
+            turtle_variable.setpos(savePosition)
+        elif character == "+":
+            turtle_variable.left(angle)
+        elif character == "-":
+            turtle_variable.right(angle)
+        elif character == "F":
+            turtle_variable.forward(length)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+turtleVariable = turtle.Turtle()
+window = turtle.Screen()
+window.bgcolor("black")
+turtleVariable.color("orange")
+turtleVariable.pensize(1)
+turtleVariable.penup()
+turtleVariable.setpos(-250, -250)
+turtleVariable.pendown()
+turtleVariable.speed(0)
+draw(turtle_variable=turtleVariable,
+     string_variable=string,
+     length=10,
+     angle=45)
+window.exitonclick()
