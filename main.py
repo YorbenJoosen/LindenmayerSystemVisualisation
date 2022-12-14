@@ -1,7 +1,7 @@
 import turtle
 
 # Make a startstring
-string = "F[+F]-F[+F[+F]-F]-F[+F]-F"
+string = "F[+F]-F[+F[+F]-F]-F[+F]-F[+F[+F]-F[+F[+F]-F]-F[+F]-F]-F[+F]-F[+F[+F]-F]-F[+F]-F[+F[+F]-F[+F[+F]-F]-F[+F]-F[+F[+F]-F[+F[+F]-F]-F[+F]-F]-F[+F]-F[+F[+F]-F]-F[+F]-F]-F[+F]-F[+F[+F]-F]-F[+F]-F[+F[+F]-F[+F[+F]-F]-F[+F]-F]-F[+F]-F[+F[+F]-F]-F[+F]-F"
 
 
 def draw(turtle_variable, string_variable, length, angle):
