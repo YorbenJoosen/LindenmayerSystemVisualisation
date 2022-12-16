@@ -3,6 +3,38 @@ import turtle
 # Make a startstring
 string = "F[+F]-F[+F[+F]-F]-F[+F]-F[+F[+F]-F[+F[+F]-F]-F[+F]-F]-F[+F]-F[+F[+F]-F]-F[+F]-F[+F[+F]-F[+F[+F]-F]-F[+F]-F[+F[+F]-F[+F[+F]-F]-F[+F]-F]-F[+F]-F[+F[+F]-F]-F[+F]-F]-F[+F]-F[+F[+F]-F]-F[+F]-F[+F[+F]-F[+F[+F]-F]-F[+F]-F]-F[+F]-F[+F[+F]-F]-F[+F]-F"
 
+string2 = """F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F
+++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F+
++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F- 
+F++F+++++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F++ 
++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+
+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++
+F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F
+++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F+
++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++
+F++F++F+++++F-F++F+++++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F
+++F++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-
+F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++
+F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+++
+++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++F+
+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F++F++
+F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-F
+++F++F+++++F-F++F++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F-
+F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++
+F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F
+++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F
+-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F++++
++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++
+F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F+
++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++
+F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F
+++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++++
++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++
++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F+++++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F
+++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-
+F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++F-F++F++F++F++F+++++
+F-F++F+++++F++F++F+++++F-F++F-F++F++F+++++F-F++F++F++F++F+++++F-F++F"""
+
 
 def draw(turtle_variable, string_variable, length, angle):
     stack = []
@@ -45,17 +77,17 @@ turtleVariable.pensize(1)
 # Do penup so we can move to the starting position without drawing lines
 turtleVariable.penup()
 # Move to the starting position
-turtleVariable.setpos(-250, -250)
+turtleVariable.setpos(0,0)
 # Do pendown so we can start drawing
 turtleVariable.pendown()
 # Set the speed
-turtleVariable.speed(0)
+turtleVariable.speed(-100)
 # Turtle starts horizontally, but we want to start upwards so we angle 90 degrees to the left
-turtleVariable.left(90)
+turtleVariable.left(180)
 # Call the drawfunction
 draw(turtle_variable=turtleVariable,
-     string_variable=string,
-     length=100,
-     angle=45)
+     string_variable=string2,
+     length=10,
+     angle=36)
 # Say the window only closes when we click otherwise it closes after the drawing is done and we can't take a good look at it
 window.exitonclick()
